@@ -1,0 +1,30 @@
+{
+  "name": "mern-bug-tracker",
+  "version": "1.0.0",
+  "description": "A comprehensive bug tracking application with testing and debugging features",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "test": "concurrently \"npm run test:server\" \"npm run test:client\"",
+    "test:server": "cd server && npm test",
+    "test:client": "cd client && npm test",
+    "test:coverage": "concurrently \"npm run test:coverage:server\" \"npm run test:coverage:client\"",
+    "test:coverage:server": "cd server && npm run test:coverage",
+    "test:coverage:client": "cd client && npm run test:coverage",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": [
+    "mern",
+    "bug-tracker",
+    "testing",
+    "debugging"
+  ],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.1",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
